@@ -8,7 +8,6 @@
 Vagrant.configure(2) do |config|
   config.vm.box       = "rancheros"
   config.ssh.username = "rancher"
-  # config.ssh.password = "rancher"
 
   config.vm.provider "virtualbox" do |vb|
      vb.check_guest_additions = false

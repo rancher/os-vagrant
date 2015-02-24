@@ -7,13 +7,14 @@
 # you're doing.
 Vagrant.configure(2) do |config|
   config.vm.box       = "rancheros"
-  config.vm.box_url   = "http://cdn.rancher.io/vagrant/x86_64/beta/rancheros_virtualbox-iso_virtualbox.box"
+  config.vm.box_url   = "http://cdn.rancher.io/vagrant/x86_64/prod/rancheros_virtualbox.box"
   config.ssh.username = "rancher"
 
   config.vm.provider "virtualbox" do |vb|
      vb.check_guest_additions = false
      vb.functional_vboxsf     = false
      vb.memory = "1024"
+     vb.gui = true
   end
 
   config.vm.synced_folder ".", "/vagrant", disabled: true

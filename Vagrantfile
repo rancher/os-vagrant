@@ -7,6 +7,7 @@
 # you're doing.
 Vagrant.configure(2) do |config|
   config.vm.box       = "rancheros"
+  config.vm.box_url   = "http://cdn.rancher.io/vagrant/x86_64/beta/rancheros_virtualbox-iso_virtualbox.box"
   config.ssh.username = "rancher"
 
   config.vm.provider "virtualbox" do |vb|

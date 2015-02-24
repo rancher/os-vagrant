@@ -14,7 +14,6 @@ Vagrant.configure(2) do |config|
      vb.check_guest_additions = false
      vb.functional_vboxsf     = false
      vb.memory = "1024"
-     vb.gui = true
   end
 
   config.vm.synced_folder ".", "/vagrant", disabled: true

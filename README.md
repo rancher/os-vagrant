@@ -35,8 +35,6 @@ vagrant box remove rancheros
 vagrant up
 ```
 
-// COMING SOON: OS Upgrades via rancher command.
-
 
 ### Customizing and configuring
 

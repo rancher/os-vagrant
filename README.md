@@ -25,6 +25,16 @@ vagrant ssh
 
 Start running Docker like you usually would!
 
+## Upgrading RancherOS Versions
+
+To upgrade the Vagrant box, refresh this repository from master.
+
+```
+vagrant destroy
+vagrant box remove rancheros
+vagrant up
+```
+
 
 ### Customizing and configuring
 

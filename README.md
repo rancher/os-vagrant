@@ -25,6 +25,16 @@ vagrant ssh
 
 Start running Docker like you usually would!
 
+## Enable Rsync folder sync
+If you want to sync the current working directory via rsync edit the Vagrantfile and change this line:
+
+<pre>$rsync_folder_disabled = true</pre>
+
+to
+
+<pre>
+$rsync_folder_disabled = <b>false</b>
+</pre>
 ## Upgrading RancherOS Versions
 
 To upgrade the Vagrant box, refresh this repository from master.

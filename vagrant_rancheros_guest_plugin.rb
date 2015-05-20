@@ -23,7 +23,7 @@ module VagrantPlugins
                 def self.configure_networks(machine, networks)
                     machine.communicate.tap do |comm|
                         interfaces = []
-                        comm.sudo("ip link show|grep eth[1-9]|awk -e '{print $2}'|sed -e 's/:$//'") do |_, result|
+                        comm.sudo("ip link show|grep eth[1-9]|awk '{print $2}'|sed -e 's/:$//'") do |_, result|
                             interfaces = result.split("\n")
                         end
 

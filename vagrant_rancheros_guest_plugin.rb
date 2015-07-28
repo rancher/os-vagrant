@@ -10,16 +10,23 @@ IPAddr.class_eval do
 end
 
 module VagrantPlugins
-    module GuestLinux
-        class Plugin < Vagrant.plugin("2")
-            guest_capability("linux", "configure_networks") do
-                Cap::ConfigureNetworks
-            end
-        end
+  module GuestLinux
+    class Plugin < Vagrant.plugin("2")
+      guest_capability("linux", "change_host_name") do
+        Cap::ChangeHostName
+      end
 
+      guest_capability("linux", "configure_networks") do
+        Cap::ConfigureNetworks
+      end
+    end
+  end
+end
+
+module VagrantPlugins
+    module GuestLinux
         module Cap
             class ConfigureNetworks
-
                 def self.configure_networks(machine, networks)
                     machine.communicate.tap do |comm|
                         interfaces = []
@@ -42,6 +49,22 @@ module VagrantPlugins
                         end
 
                         comm.sudo("system-docker restart network")
+                    end
+                end
+            end
+        end
+    end
+end
+
+module VagrantPlugins
+    module GuestLinux
+        module Cap
+            class ChangeHostName
+                def self.change_host_name(machine, name)
+                    machine.communicate.tap do |comm|
+                        if !comm.test("sudo hostname --fqdn | grep '#{name}'")
+                            comm.sudo("hostname #{name.split('.')[0]}")
+                        end
                     end
                 end
             end

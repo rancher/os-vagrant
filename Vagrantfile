@@ -29,6 +29,7 @@ Vagrant.configure(2) do |config|
 
         ip = "172.19.8.#{i+100}"
         node.vm.network "private_network", ip: ip
+        node.vm.hostname = hostname
 
         # Disabling compression because OS X has an ancient version of rsync installed.
         # Add -z or remove rsync__args below if you have a newer version of rsync on your machine.

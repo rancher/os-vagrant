@@ -12,7 +12,7 @@ Quickly checkout RancherOS using Vagrant/Virtualbox.
 2.) Clone this project
 
 ```
-git clone https://github.com/rancherio/os-vagrant.git
+git clone https://github.com/rancher/os-vagrant.git
 cd os-vagrant
 ```
 

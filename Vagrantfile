@@ -16,7 +16,7 @@ $vb_gui = false
 # you're doing.
 Vagrant.configure(2) do |config|
   config.vm.box   = "rancherio/rancheros"
-  config.vm.box_version = ">=0.3.3"
+  config.vm.box_version = ">=0.4.0"
 
   (1..$number_of_nodes).each do |i|
     hostname = "rancher-%02d" % i

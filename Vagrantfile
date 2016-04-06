@@ -18,6 +18,11 @@ Vagrant.configure(2) do |config|
   config.vm.box   = "rancherio/rancheros"
   config.vm.box_version = ">=0.4.1"
 
+  # prevent vagrant-vbguest trying to install VirtualBox Guest Additions
+  if Vagrant.has_plugin?("vagrant-vbguest")
+    config.vbguest.no_install = true
+  end  
+
   (1..$number_of_nodes).each do |i|
     hostname = "rancher-%02d" % i
 

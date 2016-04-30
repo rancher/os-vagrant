@@ -1,5 +1,7 @@
 # RancherOS Vagrant
 
+> Note: The vagrant file will be deprecated in a future release. 
+
 Quickly checkout RancherOS using Vagrant/Virtualbox.
 
 

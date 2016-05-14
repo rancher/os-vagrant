@@ -57,12 +57,6 @@ vagrant up
 To get a feel for how things work under the hood checkout the 
 [RancherOS Repo](https://github.com/rancherio/os) for details.
 
-## Contact
-For bugs, questions, comments, corrections, suggestions, etc., open an issue in
- [rancher/os](//github.com/rancher/os/issues) with a title starting with `[os-vagrant] `.
-
-Or just [click here](//github.com/rancher/os/issues/new?title=%5Bos-vagrant%5D%20) to create a new issue.
-
 
 # License
 Copyright (c) 2014-2015 [Rancher Labs, Inc.](http://rancher.com)

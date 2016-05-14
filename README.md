@@ -1,6 +1,9 @@
-# RancherOS Vagrant
 
-> Note: The vagrant file will be deprecated in a future release. 
+The vagrant file will no longer be supported. We're no longer supporting our vagrant repo and have moved to supporting docker-machine to start up RancherOS. As a result, we will be closing the issues tab in the repo.
+
+[Learn how easy it is to use RancherOS with docker-machine](http://docs.rancher.com/os/running-rancheros/workstation/docker-machine/).
+
+# RancherOS Vagrant
 
 Quickly checkout RancherOS using Vagrant/Virtualbox.
 

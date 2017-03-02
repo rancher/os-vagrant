@@ -20,7 +20,7 @@ Vagrant.configure(2) do |config|
 
   (1..$number_of_nodes).each do |i|
     hostname = "rancher-%02d" % i
-
+    config.vm.guest = :linux
     config.vm.define hostname do |node|
         node.vm.provider "virtualbox" do |vb|
             vb.memory = $vm_mem

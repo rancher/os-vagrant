@@ -1,7 +1,7 @@
 
 The vagrant file will no longer be supported. We're no longer supporting our vagrant repo and have moved to supporting docker-machine to start up RancherOS. 
 
-[Learn how easy it is to use RancherOS with docker-machine](http://docs.rancher.com/os/running-rancheros/workstation/docker-machine/).
+[Learn how easy it is to use RancherOS with docker-machine](https://rancher.com/docs/os/v1.x/en/quick-start-guide/).
 
 # RancherOS Vagrant
 
